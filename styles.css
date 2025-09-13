@@ -1,6 +1,49 @@
 body {
   font-family: system-ui, sans-serif;
   margin: 0;
-  padding: 2rem;
+  padding: 0; /* remove body padding so header spans full width */
   background: #f6f8fa;
+}
+
+/* Header Styles */
+header {
+  background-color: #24292f; /* dark header background */
+  padding: 1rem 2rem;
+}
+
+/* Navigation bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #58a6ff; /* GitHub blue highlight */
+}
+
+/* Main content */
+main {
+  padding: 2rem;
 }
