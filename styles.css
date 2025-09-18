@@ -47,3 +47,19 @@ header {
 main {
   padding: 2rem;
 }
+/* Dark theme overrides: improve contrast */
+body[data-theme="dark"] {
+  --bg: #0a0f1e;           /* slightly lighter than #0b1120 for better contrast */
+  --text: #f3f6fc;         /* brighter text */
+  --muted: #c7cfdb;        /* brighter muted text */
+  --card: #111a2f;         /* card a bit lighter than bg for separation */
+  --border: #2c3a55;       /* clearer borders */
+  --accent: #5fd4ff;       /* more vivid accent for focus rings/links */
+}
+
+/* Ensure links/buttons meet contrast */
+a, .logo { color: var(--accent); }
+.theme-toggle:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--accent) 30%, transparent);
+}
