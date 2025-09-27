@@ -2,12 +2,13 @@ body {
   font-family: system-ui, sans-serif;
   margin: 0;
   padding: 0; /* remove body padding so header spans full width */
-  background: #f6f8fa;
+  background: #f9fafb; /* slightly lighter neutral background */
+  color: #1f2937;      /* dark gray text for better readability */
 }
 
 /* Header Styles */
 header {
-  background-color: #24292f; /* dark header background */
+  background-color: #1e293b; /* slate navy for modern dark header */
   padding: 1rem 2rem;
 }
 
@@ -22,6 +23,7 @@ header {
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
+  color: #38bdf8; /* cyan accent for logo */
 }
 
 .nav-links {
@@ -34,32 +36,38 @@ header {
 
 .nav-links a {
   text-decoration: none;
-  color: white;
+  color: #f1f5f9; /* light gray instead of pure white */
   font-weight: 500;
   transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
-  color: #58a6ff; /* GitHub blue highlight */
+  color: #38bdf8; /* cyan highlight */
 }
 
 /* Main content */
 main {
   padding: 2rem;
 }
+
 /* Dark theme overrides: improve contrast */
 body[data-theme="dark"] {
-  --bg: #0a0f1e;           /* slightly lighter than #0b1120 for better contrast */
-  --text: #f3f6fc;         /* brighter text */
-  --muted: #c7cfdb;        /* brighter muted text */
-  --card: #111a2f;         /* card a bit lighter than bg for separation */
-  --border: #2c3a55;       /* clearer borders */
-  --accent: #5fd4ff;       /* more vivid accent for focus rings/links */
+  --bg: #0f172a;       /* deep slate navy */
+  --text: #f8fafc;     /* very light text */
+  --muted: #cbd5e1;    /* soft gray for secondary text */
+  --card: #1e293b;     /* card background distinct from bg */
+  --border: #334155;   /* subtle border */
+  --accent: #38bdf8;   /* cyan accent */
+  background: var(--bg);
+  color: var(--text);
 }
 
 /* Ensure links/buttons meet contrast */
-a, .logo { color: var(--accent); }
+a {
+  color: var(--accent);
+}
+
 .theme-toggle:hover {
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px color-mix(in oklab, var(--accent) 30%, transparent);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--accent) 35%, transparent);
 }
